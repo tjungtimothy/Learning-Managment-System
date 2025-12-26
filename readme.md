@@ -43,7 +43,7 @@ A modern, full-stack **Learning Management System (LMS)** designed for scalabili
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/timothy/Advanced-LMS.git
+git clone https://github.com/tjungtimothy/Learning-Managment-System
 cd Advanced-LMS
 ```
 
