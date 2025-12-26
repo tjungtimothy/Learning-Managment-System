@@ -1,39 +1,64 @@
-# Advanced-LMS
+# 🎓 Advanced-LMS
 
-A full-stack Learning Management System (LMS) built with Node.js, Express, MongoDB, React, and Cloudinary for video hosting.
+A modern, full-stack **Learning Management System (LMS)** designed for scalability, performance, and real-world usage. Built with **Node.js, Express, MongoDB, React**, and **Cloudinary** for seamless video hosting.
 
-## Features
-- User authentication (student & educator roles)
-- Educator: Create, publish, and manage courses, chapters, lectures
-- Student: Enroll in/purchase courses, track progress, rate courses
-- Video upload and streaming via Cloudinary
-- RESTful API with JWT authentication
-- Course ratings and reviews
-- Progress tracking per course
+---
 
-## Tech Stack
-- **Backend:** Node.js, Express, MongoDB, Mongoose
-- **Frontend:** React (see `/client`)
-- **Media:** Cloudinary (video hosting)
-- **Auth:** JWT, bcrypt
+## ✨ Highlights
 
-## Getting Started
+* 🔐 Secure authentication with **JWT** (Student & Educator roles)
+* 👨‍🏫 Educators can **create, publish, and manage** courses
+* 👨‍🎓 Students can **enroll, purchase, and track progress**
+* 🎥 High-quality **video upload & streaming** via Cloudinary
+* ⭐ Course **ratings & reviews** system
+* 📊 Per-course **progress tracking**
+* 🧱 Clean **RESTful API** architecture
 
-### 1. Clone the repository
+---
+
+
+---
+
+## 🧰 Tech Stack
+
+**Backend**
+
+* Node.js
+* Express.js
+* MongoDB + Mongoose
+
+**Frontend**
+
+* React (located in `/client`)
+
+**Media & Auth**
+
+* Cloudinary (Video Hosting)
+* JWT & bcrypt (Authentication)
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
 ```bash
-git clone https://github.com/gourabofficial/Advanced-LMS.git
+git clone https://github.com/timothy/Advanced-LMS.git
 cd Advanced-LMS
 ```
 
-### 2. Install dependencies
+### 2️⃣ Install Backend Dependencies
+
 ```bash
 cd server
 npm install
 ```
 
-### 3. Set up environment variables
-Create a `.env` file in `/server`:
-```
+### 3️⃣ Environment Setup
+
+Create a `.env` file inside `/server`:
+
+```env
 MONGODB_URI=your_mongodb_uri
 PORT=3000
 JWT_TOKEN=your_jwt_secret
@@ -42,57 +67,80 @@ CLOUDINARY_API_KEY=your_cloudinary_api_key
 CLOUDINARY_SECRET_KEY=your_cloudinary_secret
 ```
 
-### 4. Start the backend server
+### 4️⃣ Start Backend Server
+
 ```bash
 npm start
 ```
 
-### 5. Start the frontend (optional)
+### 5️⃣ Start Frontend (Optional)
+
 ```bash
 cd ../client
 npm install
 npm run dev
 ```
 
-## API Overview
+---
 
-### Auth
-- `POST /api/auth/register` — Register user
-- `POST /api/auth/login` — Login user
-- `POST /api/auth/logout` — Logout user
+## 🔌 API Overview
 
-### User
-- `GET /api/user/profile` — Get user profile
-- `POST /api/user/enroll/:courseId` — Enroll in course
-- `POST /api/user/purchase/:courseId` — Purchase course
-- `PUT /api/user/progress/:courseId` — Update course progress
-- `GET /api/user/progress/:courseId` — Get course progress
-- `POST /api/user/rating/:courseId` — Rate a course
+### 🔑 Authentication
 
-### Course
-- `GET /api/course/all` — List all published courses
-- `POST /api/course/create` — Create course (educator)
-- `DELETE /api/course/:courseId` — Delete course (educator)
-- `GET /api/course/my-courses` — Educator's courses
-- `PATCH /api/course/:courseId/toggle-publish` — Publish/unpublish course
-- `POST /api/course/enroll/:courseId` — Enroll in course (student)
+* `POST /api/auth/register` – Register user
+* `POST /api/auth/login` – Login user
+* `POST /api/auth/logout` – Logout user
 
-### Chapter
-- `GET /api/chapter/course/:courseId` — List chapters for a course
-- `POST /api/chapter/create/:courseId` — Create chapter (educator)
-- `DELETE /api/chapter/:chapterId` — Delete chapter (educator)
+### 👤 User
 
-### Lecture
-- `GET /api/lecture/chapter/:chapterId` — List lectures for a chapter
-- `POST /api/lecture/create/:courseId/:chapterId` — Create lecture (educator)
-- `DELETE /api/lecture/:lectureId` — Delete lecture (educator)
+* `GET /api/user/profile` – Get profile
+* `POST /api/user/enroll/:courseId` – Enroll in course
+* `POST /api/user/purchase/:courseId` – Purchase course
+* `PUT /api/user/progress/:courseId` – Update progress
+* `GET /api/user/progress/:courseId` – Get progress
+* `POST /api/user/rating/:courseId` – Rate course
 
-### Video
-- `POST /api/video/upload` — Upload video (educator)
+### 📚 Course
 
-## Video Upload
-- Videos are uploaded to Cloudinary via `/api/video/upload` (max size configurable in multer config)
-- Use the returned `videoUrl` when creating a lecture
+* `GET /api/course/all` – All published courses
+* `POST /api/course/create` – Create course (Educator)
+* `DELETE /api/course/:courseId` – Delete course
+* `GET /api/course/my-courses` – Educator courses
+* `PATCH /api/course/:courseId/toggle-publish` – Publish/Unpublish
+* `POST /api/course/enroll/:courseId` – Enroll (Student)
 
-## License
-MIT
+### 📖 Chapter
+
+* `GET /api/chapter/course/:courseId` – Course chapters
+* `POST /api/chapter/create/:courseId` – Create chapter
+* `DELETE /api/chapter/:chapterId` – Delete chapter
+
+### 🎬 Lecture
+
+* `GET /api/lecture/chapter/:chapterId` – Chapter lectures
+* `POST /api/lecture/create/:courseId/:chapterId` – Create lecture
+* `DELETE /api/lecture/:lectureId` – Delete lecture
+
+### 🎥 Video
+
+* `POST /api/video/upload` – Upload video (Educator)
+
+---
+
+## ☁️ Video Upload Notes
+
+* Videos are uploaded using **Cloudinary**
+* Managed via `multer` (size configurable)
+* Use returned `videoUrl` when creating lectures
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+### 👨‍💻 Maintained by **Timothy**
+
+If you like this project, ⭐ star the repo and feel free to contribute!
