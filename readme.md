@@ -38,14 +38,6 @@ A modern, full-stack **Learning Management System (LMS)** designed for scalabili
 
 ---
 
-## 🚀 Getting Started
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/tjungtimothy/Learning-Managment-System
-cd Advanced-LMS
-```
 
 ### 2️⃣ Install Backend Dependencies
 
